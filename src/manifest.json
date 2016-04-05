@@ -1,0 +1,46 @@
+{
+  "name": "Jura",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Improving Jira experience",
+  "icons": {
+    "16": "images/jura-logo.png",
+    "128": "images/jura-logo.png"
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "page_action": {
+    "default_icon": {
+      "19": "images/jura-logo.png",
+      "38": "images/jura-logo.png"
+    },
+    "default_title": "Jura",
+    "default_popup": "views/popup.html"
+  },
+  "options_page": "views/options.html",
+  "omnibox": {
+    "keyword": "Jura"
+  },
+  "content_scripts": [{
+    "matches": [
+      "https://*/secure/RapidBoard.jspa*",
+      "https://*/jira/secure/RapidBoard.jspa*"
+    ],
+    "js": [
+      "js/content-script.js"
+    ],
+    "css": [
+      "css/jira-content-script.css"
+    ],
+    "run_at": "document_end",
+    "all_frames": false
+  }],
+  "web_accessible_resources": [
+    "images/*.png",
+    "css/*.css",
+    "js/dist/*.js"
+  ]
+}

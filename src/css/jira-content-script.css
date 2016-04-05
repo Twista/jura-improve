@@ -1,0 +1,8 @@
+/* sidebar ticket preview */
+#ghx-detail-view {
+  width: 100% !important;
+  height: 100%;
+  position: absolute;
+  z-index: 500;
+  left: 0;
+}
