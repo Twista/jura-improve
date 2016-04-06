@@ -6,3 +6,14 @@
   z-index: 500;
   left: 0;
 }
+
+/* remove "Project Orgranization" text from header*/
+.aui-header-logo-text {
+  font-size: 0;
+}
+
+body .ghx-detail-issue .ghx-detail-list {
+    float: left;
+    width: 33%;
+    font-size: 90%
+}
